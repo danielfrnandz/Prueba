@@ -1,12 +1,8 @@
 {
   "skills": [
     {
-      "nameSkill": "CSS",
+      "nameSkill": "CSS-Bootstrap2",
       "id": 1
-    },
-    {
-      "nameSkill": "FRONTEND",
-      "id": 2
     },
     {
       "nameSkill": "BACKEND",
@@ -17,7 +13,13 @@
       "id": 4
     }
   ],
-  "teams": [],
+  "teams": [
+    {
+      "nameTeam": "Sputnik",
+      "nameTrainer": "Miguel",
+      "id": 1
+    }
+  ],
   "reclutes": [],
   "modules": [],
   "exams": []

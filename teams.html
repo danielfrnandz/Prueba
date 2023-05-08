@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="app.js" defer type="module"></script>
-    <script src="modules/skills.js" defer type="module"></script>
+    <script src="modules/teams.js" defer type="module"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -28,30 +28,32 @@
     <div class="container pt-4">
 
         <div class="text-center">
-            <h1 class="titlePage">Skills</h1>
+            <h1 class="titlePage">Teams</h1>
         </div>
 
-        <div class="registroSkill">
+        <div class="resgitroTeam">
             <a class="btn btn-secondary fw-bold" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
-                Register Skill
+                Register Teams
             </a>
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel"> <img src="img/logo.png" alt=""
-                            class="logo">Register Skill</h5>
+                            class="logo">Register Team</h5>
 
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
 
-                    <form id="formSkill">
+                    <form id="formTeam">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Skill name</label>
-                            <input type="text" class="form-control" id="nameSkill" name="nameSkill" placeholder="">
+                            <label for="exampleFormControlInput1" class="form-label">Team name</label>
+                            <input type="text" class="form-control" id="nameTeam" name="nameTeam" placeholder="">
+                            <label for="exampleFormControlInput1" class="form-label">Trainer name</label>
+                            <input type="text" class="form-control" id="nameTrainer" name="nameTrainer" placeholder="">
                         </div>
                         <button type="submit" class="btn btn-outline-secondary w-50 ">Submit</button>
                     </form>
@@ -64,32 +66,38 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name </th>
+                        <th>Name</th>
+                        <th>Trainer</th>
                         <th>Actions </th>
                     </tr>
                 </thead>
 
-                <tbody class="tableSkillsContent">
+                <tbody class="tableTeamsContent">
                     
                 </tbody>
             </table>
         </div>
 
-        <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="modalUpdateTeams" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update Skill</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Update Team</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="updateModal">
-                    <form id="skillUpdate">
+                <div class="modal-body" id="updateModalTeam">
+                    <form id="teamUpdate">
                         <div class="mb-3">
-                            <label class="form-label">Skill name</label>
-                            <input type="text" name="nameSkill" class="form-control" id="nameUpdate" aria-describedby="emailHelp">
+                            
+                            <label class="form-label">Team name</label>
+                            <input type="text" name="nameTeam" class="form-control" id="teamsUpdate" aria-describedby="emailHelp">
+                            
+                            <label class="form-label">Trainer name</label>
+                            <input type="text" name="nameTrainer" class="form-control" id="trainerUpdate" aria-describedby="emailHelp">
                         </div>
-                        <input type="hidden" value="" name="id" id="idUpdate">
+
+                        <input type="hidden" value="" name="id" id="idUpdateTeam">
                         <button type="submit" class="btn btn-outline-secondary">Submit</button>
                     </form>
                 </div>
