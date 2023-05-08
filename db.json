@@ -42,18 +42,6 @@
   "reclutes": [
     {
       "nameRecluta": "Daniel",
-      "edad": "1",
-      "telefono": "2",
-      "correo": "daniel.frnandz@asdasd",
-      "direccion": "4",
-      "fechaNac": "2023-05-15",
-      "numeroDI": "12312321",
-      "fechaIng": "2023-05-06",
-      "teamId": "2",
-      "id": 1
-    },
-    {
-      "nameRecluta": "Daniel",
       "edad": "19",
       "telefono": "3045820919",
       "correo": "daniel.frnandz@asdasd",
@@ -63,6 +51,18 @@
       "fechaIng": "2023-05-05",
       "teamId": "2",
       "id": 2
+    },
+    {
+      "nameRecluta": "Daniel Felipe",
+      "edad": "15",
+      "telefono": "3045820919",
+      "correo": "daniel.frnandz@asdasd",
+      "direccion": "asdasdas",
+      "fechaNac": "2023-05-05",
+      "numeroDI": "12312321",
+      "fechaIng": "2023-05-04",
+      "teamId": "2",
+      "id": 3
     }
   ],
   "modules": [
@@ -77,12 +77,5 @@
       "id": 2
     }
   ],
-  "exams": [
-    {
-      "id": 1,
-      "recluteId": 1,
-      "moduleId": 1,
-      "nota": 5
-    }
-  ]
+  "exams": []
 }

@@ -51,8 +51,19 @@
                     <form id="formSkill">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Evaluacion nota</label>
-                            <input type="text" class="form-control" id="nameSkill" name="nameSkill" placeholder="" required>
+                            <input type="number" class="form-control" id="nota" name="nota" placeholder="" required>
                         </div>
+
+                        <label for="exampleFormControlInput1" class="form-label">Reclutado</label>
+
+                        <select class="form-select" aria-label="Default select example" name="recluteId" id="selectReclutes" required>
+                        </select>
+
+                        <label for="exampleFormControlInput1" class="form-label">Modulo</label>
+
+                        <select class="form-select" aria-label="Default select example" name="moduleId" id="selectModules" required>
+                        </select>
+
                         <button type="submit" class="btn btn-outline-secondary w-50 ">Submit</button>
                     </form>
                 </div>
@@ -77,7 +88,7 @@
             </table>
         </div>
 
-        <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="modalUpdateEval" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -85,11 +96,11 @@
                     <h5 class="modal-title" id="exampleModalLabel">Update Evaluacion</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="updateModal">
-                    <form id="skillUpdate">
+                <div class="modal-body" id="updateModaleval">
+                    <form id="evalUpdate">
                         <div class="mb-3">
                             <label class="form-label"> Evaluacion nota</label>
-                            <input type="text" name="nameSkill" class="form-control" id="nameUpdate" aria-describedby="emailHelp" required>
+                            <input type="text" name="nota" class="form-control" id="updNota" aria-describedby="emailHelp" required>
                         </div>
                         <input type="hidden" value="" name="id" id="idUpdate">
                         <button type="submit" class="btn btn-outline-secondary">Submit</button>
