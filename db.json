@@ -51,20 +51,19 @@
       "fechaIng": "2023-05-06",
       "teamId": "2",
       "id": 1
+    }
+  ],
+  "modules": [
+    {
+      "nombre": "JavaA",
+      "skillId": "3",
+      "id": 1
     },
     {
-      "nameRecluta": "Daniel Felipe",
-      "edad": "1",
-      "telefono": "2",
-      "correo": "daniel.frnandz@asdasd",
-      "direccion": "4",
-      "fechaNac": "2023-05-15",
-      "numeroDI": "12312321",
-      "fechaIng": "2023-05-06",
-      "teamId": "2",
+      "nombre": "NOde",
+      "skillId": "3",
       "id": 2
     }
   ],
-  "modules": [],
   "exams": []
 }
