@@ -23,6 +23,10 @@ let wsTeams ={
         return html;
 
     },
+
+
+
+    
     async getTeamsbyId(id){
         const data = await getTeamById(id);
         return data

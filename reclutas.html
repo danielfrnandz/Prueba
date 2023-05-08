@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="app.js" defer type="module"></script>
+    <script src="modules/reclutas.js" defer type="module"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="style.css">
+    <title>Centro Aeroespacial Tower Zenith</title>
+</head>
+
+<body>
+    <div>
+        <my-nav></my-nav>
+    </div>
+
+    <div class="container pt-4">
+
+        <div class="text-center">
+            <h1 class="titlePage">Reclutas</h1>
+        </div>
+
+        <div class="registroRecluta">
+            <a class="btn btn-secondary fw-bold" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Register Recluta
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel"> <img src="img/logo.png" alt=""
+                            class="logo">Register Recluta</h5>
+
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+
+                    <form id="formRecluta">
+                        <div class="mb-3">
+
+                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nameRecluta" name="nameRecluta" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Edad</label>
+                            <input type="number" class="form-control" id="edad" name="edad" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Numero de identificación</label>
+                            <input type="text" class="form-control" id="numeroDI" name="numeroDI" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de ingreso</label>
+                            <input type="date" class="form-control" id="fechaIng" name="fechaIng" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Team</label>
+
+                            <select class="form-select" aria-label="Default select example" name="teamId" id="selectTeams" required>
+                               
+                            </select>
+                            
+                            
+
+                            
+                            
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary w-50 ">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablazo pt-3">
+            <table class="table table-dark table-striped table-hover text-center">
+                <thead>
+                    <tr>
+                        <th># Identificación</th>
+                        <th>Name</th>
+                        <th>Edad</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Direccion</th>
+                        <th>Team</th>
+                        <th>Fecha de Ingreso</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody class="tableReclutaContent">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal fade" id="modalUpdateRecluta" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Recluta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="updateModalRecluta">
+                    <form id="reclutaUpdate">
+                        <div class="mb-3">
+
+                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="updnameRecluta" name="nameRecluta" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Edad</label>
+                            <input type="number" class="form-control" id="updedad" name="edad" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="updtelefono" name="telefono" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="updcorreo" name="correo" placeholder="" required>
+                            
+                            <label for="exampleFormControlInput1" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="upddireccion" name="direccion" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
+                            
+                            <input type="date" class="form-control" id="updfechaNac" name="fechaNac" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Numero de identificación</label>
+                            <input type="text" class="form-control" id="updnumeroDI" name="numeroDI" placeholder="" required>
+
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de ingreso</label>
+                            <input type="date" class="form-control" id="updfechaIng" name="fechaIng" placeholder="" required>
+
+
+                        </div>
+                        <input type="hidden" value="" name="teamId" id="idTeamUpdate">
+                        <input type="hidden" value="" name="id" id="idUpdate">
+                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+    </div>
+</body>
+
+</html>

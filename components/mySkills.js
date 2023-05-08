@@ -26,7 +26,6 @@ export default{
         const campoDelete= document.querySelector(".tableSkillsContent");
         campoDelete.addEventListener("click", async (e)=> {
             e.preventDefault();
-
             if (e.target.classList.contains("delete")) {
                 const id = parseInt(e.target.dataset.skill);
             

@@ -1,7 +1,7 @@
 {
   "skills": [
     {
-      "nameSkill": "CSS-Bootstrap2",
+      "nameSkill": "CSS-Bootstrap5",
       "id": 1
     },
     {
@@ -11,6 +11,10 @@
     {
       "nameSkill": "REDES",
       "id": 4
+    },
+    {
+      "nameSkill": "FRONTEND",
+      "id": 5
     }
   ],
   "teams": [
@@ -18,9 +22,49 @@
       "nameTeam": "Sputnik",
       "nameTrainer": "Miguel",
       "id": 1
+    },
+    {
+      "nameTeam": "Artemis",
+      "nameTrainer": "Vermen",
+      "id": 2
+    },
+    {
+      "nameTeam": "Apolo",
+      "nameTrainer": "Johlver",
+      "id": 3
+    },
+    {
+      "nameTeam": "La Luna",
+      "nameTrainer": "Hey ",
+      "id": 4
     }
   ],
-  "reclutes": [],
+  "reclutes": [
+    {
+      "nameRecluta": "Daniel",
+      "edad": "1",
+      "telefono": "2",
+      "correo": "daniel.frnandz@asdasd",
+      "direccion": "4",
+      "fechaNac": "2023-05-15",
+      "numeroDI": "12312321",
+      "fechaIng": "2023-05-06",
+      "teamId": "2",
+      "id": 1
+    },
+    {
+      "nameRecluta": "Daniel Felipe",
+      "edad": "1",
+      "telefono": "2",
+      "correo": "daniel.frnandz@asdasd",
+      "direccion": "4",
+      "fechaNac": "2023-05-15",
+      "numeroDI": "12312321",
+      "fechaIng": "2023-05-06",
+      "teamId": "2",
+      "id": 2
+    }
+  ],
   "modules": [],
   "exams": []
 }

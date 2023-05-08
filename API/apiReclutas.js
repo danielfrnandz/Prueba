@@ -1,9 +1,10 @@
-const url = `http://localhost:4000/skills`;
+const url = `http://localhost:4000/reclutes`;
 
 
-export const getAllSkills = async () => {
+export const getAllReclutas = async () => {
     try {
-        const peticion = await fetch(url);
+        //relacion con la tabla Teams
+        const peticion = await fetch(`${url}?_expand=team`);        
         const data = await peticion.json();
         return data;
     } catch (error) {
@@ -11,7 +12,7 @@ export const getAllSkills = async () => {
     }
 }
 
-export const getById = async (id) => {
+export const getReclutaById = async (id) => {
     try {
         const peticion = await fetch(`${url}/${id}`);
         const data = await peticion.json();
@@ -21,11 +22,11 @@ export const getById = async (id) => {
     }
 }
 
-export const addSkill = async (skill) => {
+export const addRecluta = async (recluta) => {
     try {
         await fetch(url, {
             method: "POST",
-            body: JSON.stringify(skill),
+            body: JSON.stringify(recluta),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -35,7 +36,7 @@ export const addSkill = async (skill) => {
     }
 }
 
-export const deleteSkill = async (id) => {
+export const deleteRecluta = async (id) => {
     try {
         await fetch(`${url}/${id}`, {
             method: "DELETE"
@@ -45,11 +46,11 @@ export const deleteSkill = async (id) => {
     }
 }
 
-export const updateSkill = async (skill) => {
+export const updateRecluta = async (recluta) => {
     try {
-        await fetch(`${url}/${skill.id}`, {
+        await fetch(`${url}/${recluta.id}`, {
             method: "PUT",
-            body: JSON.stringify(skill),
+            body: JSON.stringify(recluta),
             headers: {
                 "Content-Type": "application/json"
             }

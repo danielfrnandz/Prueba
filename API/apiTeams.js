@@ -1,7 +1,6 @@
 const url = `http://localhost:4000/teams`;
 
-
-export const getAllTeams = async ()=>{
+export const getAllTeams = async () => {
     try {
         const peticion = await fetch(url);
         const data = await peticion.json();
@@ -11,7 +10,7 @@ export const getAllTeams = async ()=>{
     }
 }
 
-export const getTeamById = async (id)=>{
+export const getTeamById = async (id) => {
     try {
         const peticion = await fetch(`${url}/${id}`);
         const data = await peticion.json();
@@ -21,13 +20,13 @@ export const getTeamById = async (id)=>{
     }
 }
 
-export const addTeams = async (team)=>{
+export const addTeams = async (team) => {
     try {
-        await fetch(url,{
+        await fetch(url, {
             method: "POST",
             body: JSON.stringify(team),
-            headers:{
-                "Content-Type":"application/json"
+            headers: {
+                "Content-Type": "application/json"
             }
         });
     } catch (error) {
@@ -35,25 +34,25 @@ export const addTeams = async (team)=>{
     }
 }
 
-export const deleteTeam = async(id) =>{
+export const deleteTeam = async (id) => {
     try {
-        await fetch(`${url}/${id}`,{
+        await fetch(`${url}/${id}`, {
             method: "DELETE"
         })
-    } catch (error) {  
+    } catch (error) {
         console.log(error);
     }
 }
 
-export const updateTeam = async (team)=>{
+export const updateTeam = async (team) => {
     try {
-        await fetch(`${url}/${team.id}`,{
+        await fetch(`${url}/${team.id}`, {
             method: "PUT",
             body: JSON.stringify(team),
             headers: {
-                "Content-Type":"application/json"
+                "Content-Type": "application/json"
             }
-       })
+        })
     } catch (error) {
         console.log(error);
     }
