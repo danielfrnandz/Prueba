@@ -82,9 +82,7 @@ export default{
             document.querySelector("#idSkillUpdate").value = inputSkillId;            
             document.querySelector("#updnameModulo").value = inputName;
             document.querySelector("#idUpdate").value = inputId;
-        }
-
-        
+        }        
     }
 
 

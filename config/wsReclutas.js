@@ -53,6 +53,41 @@ let wsReclutas ={
         return html;
     },
 
+    async showMenordeEdad(){
+        let data = await getAllReclutas();
+        let html = ``;    
+                  
+        data.forEach(element => {                
+            console.log(element);
+
+            if (parseInt(element.edad)<18) {
+                html +=`
+                <tr>
+                <td>${element.numeroDI}</td>
+                <td>${element.nameRecluta}</td>            
+                <td>${element.edad}</td>
+                <td>${element.telefono}</td>
+                <td>${element.correo}</td>
+                <td>${element.direccion}</td>
+                <td>${element.team.nameTeam}</td>
+                <td>${element.fechaIng}</td>
+
+                <td class="w-25">
+                    <button type="button" class="btn btn-sm btn-outline-danger delete " data-recluta="${element.id}">Delete</button>
+                    <button type="button" class="btn btn-sm btn-outline-warning edit " data-recluta="${element.id}" data-bs-toggle="modal"
+                    data-bs-target="#modalUpdateRecluta">Edit</button>               
+                </td>
+                </tr>
+            `;            
+
+            }
+            
+        });
+        
+        return html;
+
+    }
+
 
 }
 

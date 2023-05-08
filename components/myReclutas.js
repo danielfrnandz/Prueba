@@ -26,6 +26,22 @@ export default {
         })
     },
 
+    showMenores(){
+        const botonMenores = document.querySelector("#menores");
+        botonMenores.addEventListener("click",()=>{
+            console.log("hey");
+            const ws = new Worker("config/wsReclutas.js", { type: "module" });
+            ws.postMessage({
+                module: "showMenordeEdad",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableReclutaContent").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
     addReclutado() {
         const formularioRecl = document.querySelector("#formRecluta");
         formularioRecl.addEventListener("submit", async (e) => {

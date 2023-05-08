@@ -5,3 +5,4 @@ myReclutas.showFragReclutas();
 myReclutas.addReclutado();
 myReclutas.deleteReclutadera();
 myReclutas.updateReclutadera();
+myReclutas.showMenores();

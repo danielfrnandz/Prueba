@@ -4,7 +4,8 @@
         "WebComponent",
         "form",
         "API",
-        "worker"
+        "worker",
+        "function"
     ],
     "liveServer.settings.port": 5501
 }
