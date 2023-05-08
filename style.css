@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+	padding: 0;
+}
+
+body {
+    background-image: url("img/galaxia5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;   
+}
+
+@media  (max-width: 600px) {
+ body{
+    background-image: url("img/responsive.jpeg");
+ } 
+}
+
+.logo{
+    height: 40px;
+}
+
+

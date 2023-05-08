@@ -1,7 +1,8 @@
 {
     "conventionalCommits.scopes": [
         "despliegue",
-        "WebComponent"
+        "WebComponent",
+        "form"
     ],
     "liveServer.settings.port": 5501
 }
