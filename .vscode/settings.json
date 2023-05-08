@@ -3,7 +3,8 @@
         "despliegue",
         "WebComponent",
         "form",
-        "API"
+        "API",
+        "worker"
     ],
     "liveServer.settings.port": 5501
 }

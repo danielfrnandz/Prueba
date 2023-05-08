@@ -1,7 +1,6 @@
 const url = `http://localhost:4000/skills`;
 
 
-
 export const getAllSkills = async ()=>{
     try {
         const peticion = await fetch(url);
@@ -36,7 +35,7 @@ export const deleteSkill = async(id) =>{
     }
 }
 
-export const updateOneCategory = async (skill)=>{
+export const updateSkill = async (skill)=>{
     try {
         await fetch(`${url}/${skill.id}`,{
             method: "PUT",
