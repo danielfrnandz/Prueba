@@ -17,9 +17,13 @@ body {
     background-image: url("img/responsive.jpeg");
  } 
 }
+.titlePage{
+    color: white;
+}
 
 .logo{
     height: 40px;
+    padding-right: 10px;
 }
 
 
