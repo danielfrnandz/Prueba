@@ -1,18 +1,24 @@
 {
-    "skills":[
-        {"id":1,
-    "name":"HTML"}
-
-    ],
-    "teams":[
-
-    ],
-    "reclutes":[
-
-    ],   
-    "modules":[
-
-    ],
-    "exams":[
-    ]    
+  "skills": [
+    {
+      "nameSkill": "CSS",
+      "id": 1
+    },
+    {
+      "nameSkill": "FRONTEND",
+      "id": 2
+    },
+    {
+      "nameSkill": "BACKEND",
+      "id": 3
+    },
+    {
+      "nameSkill": "REDES",
+      "id": 4
+    }
+  ],
+  "teams": [],
+  "reclutes": [],
+  "modules": [],
+  "exams": []
 }

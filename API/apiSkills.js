@@ -11,6 +11,16 @@ export const getAllSkills = async ()=>{
     }
 }
 
+export const getById = async (id)=>{
+    try {
+        const peticion = await fetch(`${url}/${id}`);
+        const data = await peticion.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export const addSkill = async (skill)=>{
     try {
         await fetch(url,{
