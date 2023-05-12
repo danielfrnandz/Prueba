@@ -28,6 +28,11 @@
       "nameTeam": "Apolo",
       "nameTrainer": "Johlver",
       "id": 3
+    },
+    {
+      "nameTeam": "Florida",
+      "nameTrainer": "Hey ",
+      "id": 4
     }
   ],
   "reclutes": [
@@ -39,28 +44,29 @@
       "direccion": "Floridablanca",
       "fechaNac": "1995-12-07",
       "numeroDI": "1065820742",
-      "fechaIng": "2023-05-04",
+      "fechaIng": "2023-01-11",
       "teamId": "2",
       "id": 1
     }
   ],
   "modules": [
     {
-      "nombre": "JavaA",
+      "nombre": "Java",
       "skillId": "3",
       "id": 1
     },
     {
       "nombre": "CSS",
-      "skillId": "4",
+      "skillId": "5",
       "id": 2
     }
   ],
   "exams": [
-    {"id":1,
-    "recluteId":"1",
-    "moduleId":"1",
-    "nota": 5
-   }
+    {
+      "nota": "5",
+      "recluteId": "1",
+      "moduleId": "2",
+      "id": 1
+    }
   ]
 }

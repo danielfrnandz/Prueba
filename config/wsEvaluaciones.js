@@ -45,7 +45,6 @@ let wsEvaluaciones = {
             `
         });
         return html;
-
     },
 
     async getEvalById(id) {

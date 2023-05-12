@@ -48,7 +48,7 @@
                 </div>
                 <div class="offcanvas-body">
 
-                    <form id="formSkill">
+                    <form id="formEvaluacion">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Evaluacion nota</label>
                             <input type="number" class="form-control" id="nota" name="nota" placeholder="" required>
@@ -82,7 +82,7 @@
                     </tr>
                 </thead>
 
-                <tbody class="tableSkillsContent">
+                <tbody class="tableEvaluaciones">
                     
                 </tbody>
             </table>
@@ -99,10 +99,23 @@
                 <div class="modal-body" id="updateModaleval">
                     <form id="evalUpdate">
                         <div class="mb-3">
-                            <label class="form-label"> Evaluacion nota</label>
-                            <input type="text" name="nota" class="form-control" id="updNota" aria-describedby="emailHelp" required>
+                            <label for="exampleFormControlInput1" class="form-label">Evaluacion nota</label>
+                            <input type="number" class="form-control" id="updnota" name="nota" placeholder="" required>
                         </div>
-                        <input type="hidden" value="" name="id" id="idUpdate">
+
+                        <label for="exampleFormControlInput1" class="form-label">Reclutado</label>
+
+                        <select class="form-select" aria-label="Default select example" name="recluteId" id="updselectReclutes" required>
+                        
+                        </select>
+
+                        <label for="exampleFormControlInput1" class="form-label">Modulo</label>
+
+                        <select class="form-select" aria-label="Default select example" name="moduleId" id="updselectModules" required>
+                        
+                        </select>
+
+                        <input type="hidden" value="" name="id" id="idEvalUpdate">
                         <button type="submit" class="btn btn-outline-secondary">Submit</button>
                     </form>
                 </div>

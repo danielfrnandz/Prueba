@@ -13,18 +13,6 @@ export default {
         })
     },
 
-    showSelectQuery() {
-        const ws = new Worker("config/wsReclutas.js", { type: "module" });
-        ws.postMessage({
-            module: "showSelectTeams",
-            data: ""
-        });        
-        ws.addEventListener("message", (e) => {
-            document.querySelector("#teamSpecific").innerHTML = e.data;
-            ws.terminate();
-        })
-    },
-
     showSelectUpdate() {
         const ws = new Worker("config/wsReclutas.js", { type: "module" });
         ws.postMessage({
@@ -37,6 +25,20 @@ export default {
         })
     },
 
+
+    showSelectQuery() {
+        const ws = new Worker("config/wsReclutas.js", { type: "module" });
+        ws.postMessage({
+            module: "showSelectTeams",
+            data: ""
+        });        
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#teamSpecific").innerHTML = e.data;
+            ws.terminate();
+        })
+    },
+
+    
     showFragReclutas() {       
         const ws = new Worker("config/wsReclutas.js", { type: "module" });
         ws.postMessage({
