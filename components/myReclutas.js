@@ -1,6 +1,7 @@
 import { addRecluta, deleteRecluta, updateRecluta } from "../API/apiReclutas.js";
 
 export default {
+
     showSelect() {
         const ws = new Worker("config/wsReclutas.js", { type: "module" });
         ws.postMessage({
@@ -60,8 +61,8 @@ export default {
             
             const ws = new Worker("config/wsReclutas.js", { type: "module" });
             ws.postMessage({
-                module: "showReclutas",
-                data: ""
+                module: "showReclubyTeamId",
+                data: `${e.target.value}`
             });
             ws.addEventListener("message", (e) => {
                 document.querySelector(".tableReclutaContent").innerHTML = e.data;
@@ -70,12 +71,13 @@ export default {
         })
     },
 
-
-
     showTodos(){
         const botonMenores = document.querySelector("#todos");
+        const selectTeams = document.querySelector("#teamSpecific");
+
         botonMenores.addEventListener("click",()=>{
             console.log("hey");
+            selectTeams.selectedIndex= 0;
             const ws = new Worker("config/wsReclutas.js", { type: "module" });
             ws.postMessage({
                 module: "showReclutas",
@@ -87,11 +89,12 @@ export default {
             })
         })
     },
-
+    
     showMenores(){
         const botonMenores = document.querySelector("#menores");
-        botonMenores.addEventListener("click",()=>{
-            console.log("hey");
+        const selectTeams = document.querySelector("#teamSpecific");
+        botonMenores.addEventListener("click",()=>{ 
+            selectTeams.selectedIndex= 0;
             const ws = new Worker("config/wsReclutas.js", { type: "module" });
             ws.postMessage({
                 module: "showMenordeEdad",
@@ -106,7 +109,9 @@ export default {
 
     showDosMeses(){
         const botonMenores = document.querySelector("#dosmeses");
+        const selectTeams = document.querySelector("#teamSpecific");
         botonMenores.addEventListener("click",()=>{       
+            selectTeams.selectedIndex= 0;
             const ws = new Worker("config/wsReclutas.js", { type: "module" });
             ws.postMessage({
                 module: "showDosMeses",

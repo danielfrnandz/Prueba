@@ -31,7 +31,7 @@
     },
     {
       "nameTeam": "Florida",
-      "nameTrainer": "Hey ",
+      "nameTrainer": "Daniel",
       "id": 4
     }
   ],
@@ -41,12 +41,24 @@
       "edad": "15",
       "telefono": "3045820919",
       "correo": "daniel.frnandz@hotmail.com",
-      "direccion": "Floridablanca",
+      "direccion": "Bucaramanga",
       "fechaNac": "1995-12-07",
       "numeroDI": "1065820742",
       "fechaIng": "2023-01-11",
       "teamId": "2",
       "id": 1
+    },
+    {
+      "nameRecluta": "Felipe Rincon",
+      "edad": "20",
+      "telefono": "3045820919",
+      "correo": "daniel.frnandz@asdasd",
+      "direccion": "Floridablanca",
+      "fechaNac": "2023-05-24",
+      "numeroDI": "12312321",
+      "fechaIng": "2023-05-09",
+      "teamId": "4",
+      "id": 2
     }
   ],
   "modules": [

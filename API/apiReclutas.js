@@ -22,6 +22,16 @@ export const getReclutaById = async (id) => {
     }
 }
 
+export const getReclutaByTeamId = async (id) => {
+    try {
+        const peticion = await fetch(`${url}?teamId=${id}&_expand=team`);
+        const data = await peticion.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export const addRecluta = async (recluta) => {
     try {
         await fetch(url, {

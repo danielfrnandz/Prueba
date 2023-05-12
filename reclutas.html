@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        
+
     <link rel="stylesheet" href="style.css">
     <title>Centro Aeroespacial Tower Zenith</title>
 </head>
@@ -32,23 +32,18 @@
         </div>
 
         <div class="registroRecluta">
-           
-
 
             <a class="btn btn-secondary fw-bold" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                 aria-controls="offcanvasExample">
                 Register Recluta
             </a>
-
             <button type="button" class="btn btn-success " id="todos">Todos</button>
             <button type="button" class="btn btn-primary " id="menores">Menores de edad</button>
-            <button type="button" class="btn btn-primary " id="dosmeses">Ingreso 2 meses</button>
-           
-            <select class="form-select" id="teamSpecific" >
+            <button type="button" class="btn btn-info " id="dosmeses">Ingreso 2 meses</button>
 
+            <select class="form-select" id="teamSpecific">
             </select>
 
-           
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
@@ -65,35 +60,42 @@
                         <div class="mb-3">
 
                             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nameRecluta" name="nameRecluta" placeholder="" required>
-                            
+                            <input type="text" class="form-control" id="nameRecluta" name="nameRecluta" placeholder=""
+                                required>
+
                             <label for="exampleFormControlInput1" class="form-label">Edad</label>
                             <input type="number" class="form-control" id="edad" name="edad" placeholder="" required>
-                            
+
                             <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" required>
-                            
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder=""
+                                required>
+
                             <label for="exampleFormControlInput1" class="form-label">Correo</label>
                             <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
-                            
+
                             <label for="exampleFormControlInput1" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="" required>
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder=""
+                                required>
 
                             <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
-                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" placeholder="" required>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac" placeholder=""
+                                required>
 
                             <label for="exampleFormControlInput1" class="form-label">Numero de identificación</label>
-                            <input type="text" class="form-control" id="numeroDI" name="numeroDI" placeholder="" required>
+                            <input type="text" class="form-control" id="numeroDI" name="numeroDI" placeholder=""
+                                required>
 
                             <label for="exampleFormControlInput1" class="form-label">Fecha de ingreso</label>
-                            <input type="date" class="form-control" id="fechaIng" name="fechaIng" placeholder="" required>
+                            <input type="date" class="form-control" id="fechaIng" name="fechaIng" placeholder=""
+                                required>
 
                             <label for="exampleFormControlInput1" class="form-label">Team</label>
 
-                            <select class="form-select" aria-label="Default select example" name="teamId" id="selectTeams" required>
-                               
-                            </select>                                   
-                            
+                            <select class="form-select" aria-label="Default select example" name="teamId"
+                                id="selectTeams" required>
+
+                            </select>
+
                         </div>
                         <button type="submit" class="btn btn-outline-secondary w-50 ">Submit</button>
                     </form>
@@ -105,76 +107,86 @@
             <table class="table table-dark table-striped table-hover text-center">
                 <thead>
                     <tr>
-                        <th># Identificación</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Edad</th>
                         <th>Telefono</th>
                         <th>Correo</th>
                         <th>Direccion</th>
                         <th>Team</th>
-                        <th>Fecha de Ingreso</th>
+                        <th>Ingreso</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
 
                 <tbody class="tableReclutaContent">
-                    
+
                 </tbody>
             </table>
         </div>
 
         <div class="modal fade" id="modalUpdateRecluta" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update Recluta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="updateModalRecluta">
-                    <form id="reclutaUpdate">
-                        <div class="mb-3">
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update Recluta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="updateModalRecluta">
+                        <form id="reclutaUpdate">
+                            <div class="mb-3">
 
-                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="updnameRecluta" name="nameRecluta" placeholder="" required>
-                            
-                            <label for="exampleFormControlInput1" class="form-label">Edad</label>
-                            <input type="number" class="form-control" id="updedad" name="edad" placeholder="" required>
-                            
-                            <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="updtelefono" name="telefono" placeholder="" required>
-                            
-                            <label for="exampleFormControlInput1" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="updcorreo" name="correo" placeholder="" required>
-                            
-                            <label for="exampleFormControlInput1" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" id="upddireccion" name="direccion" placeholder="" required>
+                                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="updnameRecluta" name="nameRecluta"
+                                    placeholder="" required>
 
-                            <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
-                            
-                            <input type="date" class="form-control" id="updfechaNac" name="fechaNac" placeholder="" required>
+                                <label for="exampleFormControlInput1" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="updedad" name="edad" placeholder=""
+                                    required>
 
-                            <label for="exampleFormControlInput1" class="form-label">Numero de identificación</label>
-                            <input type="text" class="form-control" id="updnumeroDI" name="numeroDI" placeholder="" required>
+                                <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="updtelefono" name="telefono" placeholder=""
+                                    required>
 
-                            <label for="exampleFormControlInput1" class="form-label">Fecha de ingreso</label>
-                            <input type="date" class="form-control" id="updfechaIng" name="fechaIng" placeholder="" required>
+                                <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="updcorreo" name="correo" placeholder=""
+                                    required>
 
-                            <label for="exampleFormControlInput1" class="form-label">Team</label>
-                            <select class="form-select" aria-label="Default select example" name="teamId" id="selectTeamsUpdate" required>                               
-                            </select>    
+                                <label for="exampleFormControlInput1" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" id="upddireccion" name="direccion"
+                                    placeholder="" required>
+
+                                <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
+
+                                <input type="date" class="form-control" id="updfechaNac" name="fechaNac" placeholder=""
+                                    required>
+
+                                <label for="exampleFormControlInput1" class="form-label">Numero de
+                                    identificación</label>
+                                <input type="text" class="form-control" id="updnumeroDI" name="numeroDI" placeholder=""
+                                    required>
+
+                                <label for="exampleFormControlInput1" class="form-label">Fecha de ingreso</label>
+                                <input type="date" class="form-control" id="updfechaIng" name="fechaIng" placeholder=""
+                                    required>
+
+                                <label for="exampleFormControlInput1" class="form-label">Team</label>
+                                <select class="form-select" aria-label="Default select example" name="teamId"
+                                    id="selectTeamsUpdate" required>
+                                </select>
 
 
-                        </div>                      
-                        <input type="hidden" value="" name="id" id="idUpdate">
-                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
-                    </form>
+                            </div>
+                            <input type="hidden" value="" name="id" id="idUpdate">
+                            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-   
+
 
 
 
