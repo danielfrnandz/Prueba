@@ -95,6 +95,18 @@
       "recluteId": "2",
       "moduleId": "3",
       "id": 2
+    },
+    {
+      "nota": "5",
+      "recluteId": "1",
+      "moduleId": "1",
+      "id": 3
+    },
+    {
+      "nota": "1",
+      "recluteId": "2",
+      "moduleId": "4",
+      "id": 4
     }
   ]
 }

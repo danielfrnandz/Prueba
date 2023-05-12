@@ -62,12 +62,12 @@
                     <form id="formEvaluacion">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Evaluacion nota</label>
-                            <input type="number" class="form-control" id="nota" name="nota" placeholder="" required>
+                            <input type="number" class="form-control" id="nota" name="nota" min="0" max="5" placeholder="" required>
                         </div>
 
                         <label for="exampleFormControlInput1" class="form-label">Reclutado</label>
 
-                        <select class="form-select" aria-label="Default select example" name="recluteId" min="0" max="5" id="selectReclutes" required>
+                        <select class="form-select" aria-label="Default select example" name="recluteId"  id="selectReclutes" required>
                         </select>
 
                         <label for="exampleFormControlInput1" class="form-label">Modulo</label>
@@ -111,7 +111,7 @@
                     <form id="evalUpdate">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Evaluacion nota</label>
-                            <input type="number" class="form-control" id="updnota" name="nota" placeholder="" required>
+                            <input type="number" class="form-control" id="updnota" name="nota" min="0" max="5" placeholder="" required>
                         </div>
 
                         <label for="exampleFormControlInput1" class="form-label">Reclutado</label>
