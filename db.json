@@ -11,6 +11,10 @@
     {
       "nameSkill": "FRONTEND",
       "id": 5
+    },
+    {
+      "nameSkill": "REDES",
+      "id": 6
     }
   ],
   "teams": [
@@ -71,6 +75,11 @@
       "nombre": "CSS",
       "skillId": "5",
       "id": 2
+    },
+    {
+      "nombre": "Node",
+      "skillId": "3",
+      "id": 3
     }
   ],
   "exams": [

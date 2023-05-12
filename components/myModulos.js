@@ -23,7 +23,56 @@ export default{
             document.querySelector("#selectSkillsUpdate").innerHTML = e.data;
             ws.terminate();
         })
+    },    
+
+    showSelectSkillSpecific(){
+        const ws = new Worker("config/wsModulos.js", { type: "module" });
+        ws.postMessage({
+            module: "showSelectSkills",
+            data: ""
+        });
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#skillSpecific").innerHTML = e.data;
+            ws.terminate();
+        })
     },
+
+    showSkillSpecific(){
+        const botonMenores = document.querySelector("#skillSpecific");
+        botonMenores.addEventListener("change",(e)=>{
+            console.log(`heyCambio ${e.target.value}` );
+            
+            const ws = new Worker("config/wsModulos.js", { type: "module" });
+            ws.postMessage({
+                module: "showModulebySkill",
+                data: `${e.target.value}`
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableModulesContent").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
+    showTodos(){
+        const botonTodos = document.querySelector("#todos");
+        const selectSkills = document.querySelector("#skillSpecific");
+
+        botonTodos.addEventListener("click",()=>{
+            console.log("hey");
+            selectSkills.selectedIndex= 0;
+            const ws = new Worker("config/wsModulos.js", { type: "module" });
+            ws.postMessage({
+                module: "showModule",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableModulesContent").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
 
     showFragModule(){       
         const ws = new Worker("config/wsModulos.js", { type: "module" });

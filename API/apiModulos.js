@@ -22,6 +22,18 @@ export const getModuleById = async (id) => {
     }
 }
 
+export const getModuleBySkillId = async (id) => {
+    try {
+        const peticion = await fetch(`${url}?skillId=${id}&_expand=skill`);
+        const data = await peticion.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
 export const addModule = async (module) => {
     try {
         await fetch(url, {

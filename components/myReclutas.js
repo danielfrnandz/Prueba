@@ -72,10 +72,10 @@ export default {
     },
 
     showTodos(){
-        const botonMenores = document.querySelector("#todos");
+        const botonTodos = document.querySelector("#todos");
         const selectTeams = document.querySelector("#teamSpecific");
 
-        botonMenores.addEventListener("click",()=>{
+        botonTodos.addEventListener("click",()=>{
             console.log("hey");
             selectTeams.selectedIndex= 0;
             const ws = new Worker("config/wsReclutas.js", { type: "module" });
@@ -89,7 +89,7 @@ export default {
             })
         })
     },
-    
+
     showMenores(){
         const botonMenores = document.querySelector("#menores");
         const selectTeams = document.querySelector("#teamSpecific");

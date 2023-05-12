@@ -6,3 +6,6 @@ myModulos.showFragModule();
 myModulos.addModulo();
 myModulos.deleteModulos();
 myModulos.updateModulos();
+myModulos.showSelectSkillSpecific();
+myModulos.showSkillSpecific();
+myModulos.showTodos();
