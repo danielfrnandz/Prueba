@@ -40,6 +40,13 @@
             <button type="button" class="btn btn-success " id="todos">Todos</button>
             <button type="button" class="btn btn-primary " id="perdidos">Perdidos</button>
 
+            <div class="col-5 pt-2">
+                <label for="exampleFormControlInput1" class="form-label filtro">Filtro por Team</label>
+                <select class="form-select" id="reclutaSpecific">
+                </select>
+            </div>
+
+
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                 aria-labelledby="offcanvasExampleLabel">
@@ -60,7 +67,7 @@
 
                         <label for="exampleFormControlInput1" class="form-label">Reclutado</label>
 
-                        <select class="form-select" aria-label="Default select example" name="recluteId" id="selectReclutes" required>
+                        <select class="form-select" aria-label="Default select example" name="recluteId" min="0" max="5" id="selectReclutes" required>
                         </select>
 
                         <label for="exampleFormControlInput1" class="form-label">Modulo</label>

@@ -1,4 +1,4 @@
-import { getAllEvaluaciones, getEvaluacionesById } from "../API/apiEvaluaciones.js";
+import { getAllEvaluaciones, getEvaluacionesById, getEvaluacionesByReclutaId } from "../API/apiEvaluaciones.js";
 import { getAllReclutas } from "../API/apiReclutas.js"; 
 import { getAllModules } from "../API/apiModulos.js";
 
@@ -74,6 +74,34 @@ let wsEvaluaciones = {
         });
         return html;
     },
+
+    async showEvaluacionbyReclutaId(id){
+        let data = await getEvaluacionesByReclutaId(id);
+        let html = ``;    
+                  
+        data.forEach(element => {        
+            html +=`
+            <tr>         
+            <td>${element.reclute.numeroDI}</td>
+            <td>${element.reclute.nameRecluta}</td>
+            <td>${element.module.nombre}</td>      
+            <td>${element.nota}</td>           
+
+            <td class="w-25">
+                <button type="button" class="btn btn-sm btn-outline-danger delete " data-eval="${element.id}">Delete</button>
+                <button type="button" class="btn btn-sm btn-outline-warning edit " data-eval="${element.id}" data-bs-toggle="modal"
+                data-bs-target="#modalUpdateEval">Edit</button>               
+            </td>            
+        </tr>
+            `;            
+        });
+        
+        return html;
+    },
+
+
+
+
 
     async getEvalById(id) {
         const data = await getEvaluacionesById(id);

@@ -12,3 +12,4 @@ myEvaluaciones.showSelectSkillUpdate();
 
 myEvaluaciones.showPerdidos();
 myEvaluaciones.showTodos();
+myEvaluaciones.showReclutaSpecific();

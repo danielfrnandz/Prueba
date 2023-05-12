@@ -52,6 +52,18 @@ export default{
         })
     },
 
+    showSelectRecluteUpdate(){
+        const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
+            ws.postMessage({
+                module: "showSelectReclutas",
+                data: ""
+        });
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#reclutaSpecific").innerHTML = e.data;
+            ws.terminate();
+        })
+    },
+
     showEvaluaciones(){
         const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
             ws.postMessage({
@@ -66,11 +78,11 @@ export default{
 
     showTodos(){
         const botonTodos = document.querySelector("#todos");
-        /* const selectTeams = document.querySelector("#teamSpecific"); */
+        const selectRecluta = document.querySelector("#reclutaSpecific");
 
         botonTodos.addEventListener("click",()=>{
             console.log("hey");
-            /* selectTeams.selectedIndex= 0; */
+            selectRecluta.selectedIndex= 0; 
             const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
             ws.postMessage({
                 module: "showEvaluaciones",
@@ -85,9 +97,9 @@ export default{
 
     showPerdidos(){
         const botonPerdidos = document.querySelector("#perdidos");
-       /*  const selectTeams = document.querySelector("#teamSpecific"); */
+         const selectRecluta = document.querySelector("#reclutaSpecific"); 
         botonPerdidos.addEventListener("click",()=>{ 
-           /*  selectTeams.selectedIndex= 0; */
+           selectRecluta.selectedIndex= 0;
             const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
             ws.postMessage({
                 module: "showEvaluacionesPerdidas",
@@ -99,6 +111,25 @@ export default{
             })
         })
     },
+
+    showReclutaSpecific(){
+        const selectRecluta = document.querySelector("#reclutaSpecific");
+        selectRecluta.addEventListener("change",(e)=>{
+            console.log(`heyCambio ${e.target.value}` );
+
+            const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
+            ws.postMessage({
+                module: "showEvaluacionbyReclutaId",
+                data: `${e.target.value}`
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableEvaluaciones").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
+
 
     addEvaluaciones() {
         const formularioRecl = document.querySelector("#formEvaluacion");
