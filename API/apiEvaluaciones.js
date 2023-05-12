@@ -4,7 +4,7 @@ const url = `http://localhost:4000/exams`
 export const getAllEvaluaciones = async () => {
     try {
         //relacion con la tabla Skills
-        const peticion = await fetch(`${url}?_expand=module&_expand=reclute`);        
+        const peticion = await fetch(`${url}?_expand=reclute&_expand=module`);        
         const data = await peticion.json();
         return data;
     } catch (error) {

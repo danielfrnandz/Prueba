@@ -7,8 +7,7 @@ let wsReclutas ={
         let data = await getAllReclutas();
         let html = ``;    
                   
-        data.forEach(element => {   
-            console.log(element);
+        data.forEach(element => {        
             html +=`
             <tr>
             <td>${element.numeroDI}</td>
@@ -43,12 +42,10 @@ let wsReclutas ={
         let data = await getAllTeams();
         let html = ` <option selected disabled>Escoge un team</option>`;
         
-        data.forEach(element => {
-     
+        data.forEach(element => {     
             html += `                      
             <option name="teamId2" value="${element.id}">${element.nameTeam}</option>
             `
-
         });
         return html;
     },
@@ -57,9 +54,7 @@ let wsReclutas ={
         let data = await getAllReclutas();
         let html = ``;    
                   
-        data.forEach(element => {                
-            console.log(element);
-
+        data.forEach(element => { 
             if (parseInt(element.edad)<18) {
                 html +=`
                 <tr>
@@ -96,8 +91,7 @@ let wsReclutas ={
 
             let diferencia = (fechaActual.getTime() - fechaIngreso.getTime());
             let dias = 1000 * 60 * 60 * 24;
-             let result = Math.round(diferencia/dias);    
-         
+             let result = Math.round(diferencia/dias);
 
             if (result >= 60) {
                 html +=`

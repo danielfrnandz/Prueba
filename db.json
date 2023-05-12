@@ -56,5 +56,11 @@
       "id": 2
     }
   ],
-  "exams": []
+  "exams": [
+    {"id":1,
+    "recluteId":"1",
+    "moduleId":"1",
+    "nota": 5
+   }
+  ]
 }

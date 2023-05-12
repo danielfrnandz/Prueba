@@ -1,21 +1,21 @@
 import { getAllEvaluaciones, getEvaluacionesById } from "../API/apiEvaluaciones.js";
-import { getAllReclutas } from "../API/apiReclutas.js"; ç
+import { getAllReclutas } from "../API/apiReclutas.js"; 
 import { getAllModules } from "../API/apiModulos.js";
 
 let wsEvaluaciones = {
     async showSelectModulos() {
-        let data = await getAllModules();
+        let data = await getAllModules(); 
         let html = ` <option selected disabled>Escoge un modulo </option>`;
 
         data.forEach(element => {
-            html += `                      
+            html += `
             <option name="teamId2" value="${element.id}">${element.nombre}</option>           `
         });
         return html;
     },
 
     async showSelectReclutas() {
-        let data = await getAllReclutas();
+        let data = await getAllReclutas();   
         let html = ` <option selected disabled>Escoge un recluta </option>`;
         data.forEach(element => {
             html += `                      
@@ -31,16 +31,16 @@ let wsEvaluaciones = {
         data.forEach(element => {
             html += `            
             <tr>         
-            <td>${element.id}</td>
-            <td>${element.reclute.nameRecluta}</td>
-            <td>${element.module.nombre}</td>      
-            <td>${element.nota}</td>           
+                <td>${element.reclute.numeroDI}</td>
+                <td>${element.reclute.nameRecluta}</td>
+                <td>${element.module.nombre}</td>      
+                <td>${element.nota}</td>           
 
-            <td class="w-25">
-                <button type="button" class="btn btn-sm btn-outline-danger delete " data-eval="${element.id}">Delete</button>
-                <button type="button" class="btn btn-sm btn-outline-warning edit " data-eval="${element.id}" data-bs-toggle="modal"
-                data-bs-target="#modalUpdateEval">Edit</button>               
-            </td>            
+                <td class="w-25">
+                    <button type="button" class="btn btn-sm btn-outline-danger delete " data-eval="${element.id}">Delete</button>
+                    <button type="button" class="btn btn-sm btn-outline-warning edit " data-eval="${element.id}" data-bs-toggle="modal"
+                    data-bs-target="#modalUpdateEval">Edit</button>               
+                </td>            
             </tr>
             `
         });

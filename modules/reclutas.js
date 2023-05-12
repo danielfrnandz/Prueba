@@ -10,3 +10,5 @@ myReclutas.updateReclutadera();
 myReclutas.showMenores();
 myReclutas.showTodos();
 myReclutas.showDosMeses();
+myReclutas.showSelectQuery();
+myReclutas.showTeamSpecific();

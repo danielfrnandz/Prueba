@@ -13,6 +13,18 @@ export default {
         })
     },
 
+    showSelectQuery() {
+        const ws = new Worker("config/wsReclutas.js", { type: "module" });
+        ws.postMessage({
+            module: "showSelectTeams",
+            data: ""
+        });        
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#teamSpecific").innerHTML = e.data;
+            ws.terminate();
+        })
+    },
+
     showSelectUpdate() {
         const ws = new Worker("config/wsReclutas.js", { type: "module" });
         ws.postMessage({
@@ -38,6 +50,25 @@ export default {
     },
 
     //Filtros
+
+    showTeamSpecific(){
+        const botonMenores = document.querySelector("#teamSpecific");
+        botonMenores.addEventListener("change",(e)=>{
+            console.log(`heyCambio ${e.target.value}` );
+            
+            const ws = new Worker("config/wsReclutas.js", { type: "module" });
+            ws.postMessage({
+                module: "showReclutas",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableReclutaContent").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
+
 
     showTodos(){
         const botonMenores = document.querySelector("#todos");
