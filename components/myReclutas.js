@@ -13,8 +13,19 @@ export default {
         })
     },
 
-    showFragReclutas() {
-        console.log("reclu");
+    showSelectUpdate() {
+        const ws = new Worker("config/wsReclutas.js", { type: "module" });
+        ws.postMessage({
+            module: "showSelectTeams",
+            data: ""
+        });
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#selectTeamsUpdate").innerHTML = e.data;
+            ws.terminate();
+        })
+    },
+
+    showFragReclutas() {       
         const ws = new Worker("config/wsReclutas.js", { type: "module" });
         ws.postMessage({
             module: "showReclutas",
@@ -23,6 +34,24 @@ export default {
         ws.addEventListener("message", (e) => {
             document.querySelector(".tableReclutaContent").innerHTML = e.data;
             ws.terminate();
+        })
+    },
+
+    //Filtros
+
+    showTodos(){
+        const botonMenores = document.querySelector("#todos");
+        botonMenores.addEventListener("click",()=>{
+            console.log("hey");
+            const ws = new Worker("config/wsReclutas.js", { type: "module" });
+            ws.postMessage({
+                module: "showReclutas",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableReclutaContent").innerHTML = e.data;
+                ws.terminate();
+            })
         })
     },
 
@@ -41,6 +70,23 @@ export default {
             })
         })
     },
+
+    showDosMeses(){
+        const botonMenores = document.querySelector("#dosmeses");
+        botonMenores.addEventListener("click",()=>{       
+            const ws = new Worker("config/wsReclutas.js", { type: "module" });
+            ws.postMessage({
+                module: "showDosMeses",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableReclutaContent").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
+    //----------
 
     addReclutado() {
         const formularioRecl = document.querySelector("#formRecluta");
@@ -99,7 +145,7 @@ export default {
                 const inputNumeroID = recluta['numeroDI'];
                 const inpuFechaIng = recluta['fechaIng'];
                 
-                document.querySelector("#idTeamUpdate").value = inputTeamId;
+                document.querySelector("#selectTeamsUpdate").value = inputTeamId;
                 document.querySelector("#idUpdate").value = inputId;
                 document.querySelector("#updnameRecluta").value = inputName;
                 document.querySelector("#updedad").value = inputEdad;

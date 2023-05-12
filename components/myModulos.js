@@ -13,6 +13,18 @@ export default{
         })
     },
 
+    showSelectSkillUpdate(){
+        const ws = new Worker("config/wsModulos.js", { type: "module" });
+        ws.postMessage({
+            module: "showSelectSkills",
+            data: ""
+        });
+        ws.addEventListener("message", (e) => {
+            document.querySelector("#selectSkillsUpdate").innerHTML = e.data;
+            ws.terminate();
+        })
+    },
+
     showFragModule(){       
         const ws = new Worker("config/wsModulos.js", { type: "module" });
         ws.postMessage({
@@ -79,7 +91,7 @@ export default{
             const inputSkillId = modulo['skillId'];
             const inputName = modulo['nombre'];
 
-            document.querySelector("#idSkillUpdate").value = inputSkillId;            
+            document.querySelector("#selectSkillsUpdate").value = inputSkillId;            
             document.querySelector("#updnameModulo").value = inputName;
             document.querySelector("#idUpdate").value = inputId;
         }        

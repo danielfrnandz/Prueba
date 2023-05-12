@@ -7,7 +7,7 @@ let wsReclutas ={
         let data = await getAllReclutas();
         let html = ``;    
                   
-        data.forEach(element => {                
+        data.forEach(element => {   
             console.log(element);
             html +=`
             <tr>
@@ -82,12 +82,48 @@ let wsReclutas ={
 
             }
             
-        });
-        
+        });        
         return html;
+    }, 
 
-    }
+    async showDosMeses(){
+        let data = await getAllReclutas();
+        let html = ``;    
+                  
+        data.forEach(element => {     
+            let fechaIngreso = new Date(element.fechaIng);
+            let fechaActual = new Date();
 
+            let diferencia = (fechaActual.getTime() - fechaIngreso.getTime());
+            let dias = 1000 * 60 * 60 * 24;
+             let result = Math.round(diferencia/dias);    
+         
+
+            if (result >= 60) {
+                html +=`
+                <tr>
+                <td>${element.numeroDI}</td>
+                <td>${element.nameRecluta}</td>            
+                <td>${element.edad}</td>
+                <td>${element.telefono}</td>
+                <td>${element.correo}</td>
+                <td>${element.direccion}</td>
+                <td>${element.team.nameTeam}</td>
+                <td>${element.fechaIng}</td>
+
+                <td class="w-25">
+                    <button type="button" class="btn btn-sm btn-outline-danger delete " data-recluta="${element.id}">Delete</button>
+                    <button type="button" class="btn btn-sm btn-outline-warning edit " data-recluta="${element.id}" data-bs-toggle="modal"
+                    data-bs-target="#modalUpdateRecluta">Edit</button>               
+                </td>
+                </tr>
+            `;            
+
+            }
+            
+        });        
+        return html;
+    }, 
 
 }
 

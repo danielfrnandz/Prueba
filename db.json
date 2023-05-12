@@ -1,10 +1,6 @@
 {
   "skills": [
     {
-      "nameSkill": "CSS-Bootstrap5",
-      "id": 1
-    },
-    {
       "nameSkill": "BACKEND",
       "id": 3
     },
@@ -32,37 +28,20 @@
       "nameTeam": "Apolo",
       "nameTrainer": "Johlver",
       "id": 3
-    },
-    {
-      "nameTeam": "La Luna",
-      "nameTrainer": "Hey ",
-      "id": 4
     }
   ],
   "reclutes": [
     {
-      "nameRecluta": "Daniel",
-      "edad": "19",
-      "telefono": "3045820919",
-      "correo": "daniel.frnandz@asdasd",
-      "direccion": "asdasdas",
-      "fechaNac": "2023-05-31",
-      "numeroDI": "12312321",
-      "fechaIng": "2023-05-05",
-      "teamId": "2",
-      "id": 2
-    },
-    {
-      "nameRecluta": "Daniel Felipe",
+      "nameRecluta": "Daniel Fernandez",
       "edad": "15",
       "telefono": "3045820919",
-      "correo": "daniel.frnandz@asdasd",
-      "direccion": "asdasdas",
-      "fechaNac": "2023-05-05",
-      "numeroDI": "12312321",
+      "correo": "daniel.frnandz@hotmail.com",
+      "direccion": "Floridablanca",
+      "fechaNac": "1995-12-07",
+      "numeroDI": "1065820742",
       "fechaIng": "2023-05-04",
       "teamId": "2",
-      "id": 3
+      "id": 1
     }
   ],
   "modules": [
@@ -72,8 +51,8 @@
       "id": 1
     },
     {
-      "nombre": "NOde",
-      "skillId": "3",
+      "nombre": "CSS",
+      "skillId": "4",
       "id": 2
     }
   ],
