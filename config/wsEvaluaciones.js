@@ -47,6 +47,34 @@ let wsEvaluaciones = {
         return html;
     },
 
+
+    async showEvaluacionesPerdidas() {
+        let data = await getAllEvaluaciones();
+        let html = ``;
+
+        data.forEach(element => {
+            if (element.nota < 3) {
+                html += `            
+                <tr>         
+                    <td>${element.reclute.numeroDI}</td>
+                    <td>${element.reclute.nameRecluta}</td>
+                    <td>${element.module.nombre}</td>      
+                    <td>${element.nota}</td>           
+
+                    <td class="w-25">
+                        <button type="button" class="btn btn-sm btn-outline-danger delete " data-eval="${element.id}">Delete</button>
+                        <button type="button" class="btn btn-sm btn-outline-warning edit " data-eval="${element.id}" data-bs-toggle="modal"
+                        data-bs-target="#modalUpdateEval">Edit</button>               
+                    </td>            
+                </tr>
+            `                
+            }
+
+            
+        });
+        return html;
+    },
+
     async getEvalById(id) {
         const data = await getEvaluacionesById(id);
         return data

@@ -64,6 +64,42 @@ export default{
         })
     },
 
+    showTodos(){
+        const botonTodos = document.querySelector("#todos");
+        /* const selectTeams = document.querySelector("#teamSpecific"); */
+
+        botonTodos.addEventListener("click",()=>{
+            console.log("hey");
+            /* selectTeams.selectedIndex= 0; */
+            const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
+            ws.postMessage({
+                module: "showEvaluaciones",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableEvaluaciones").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
+    showPerdidos(){
+        const botonPerdidos = document.querySelector("#perdidos");
+       /*  const selectTeams = document.querySelector("#teamSpecific"); */
+        botonPerdidos.addEventListener("click",()=>{ 
+           /*  selectTeams.selectedIndex= 0; */
+            const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
+            ws.postMessage({
+                module: "showEvaluacionesPerdidas",
+                data: ""
+            });
+            ws.addEventListener("message", (e) => {
+                document.querySelector(".tableEvaluaciones").innerHTML = e.data;
+                ws.terminate();
+            })
+        })
+    },
+
     addEvaluaciones() {
         const formularioRecl = document.querySelector("#formEvaluacion");
         formularioRecl.addEventListener("submit", async (e) => {

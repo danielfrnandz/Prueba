@@ -80,6 +80,11 @@
       "nombre": "Node",
       "skillId": "3",
       "id": 3
+    },
+    {
+      "nombre": "Packet Tracer",
+      "skillId": "4",
+      "id": 4
     }
   ],
   "exams": [
@@ -88,6 +93,12 @@
       "recluteId": "1",
       "moduleId": "2",
       "id": 1
+    },
+    {
+      "nota": "2",
+      "recluteId": "2",
+      "moduleId": "3",
+      "id": 2
     }
   ]
 }

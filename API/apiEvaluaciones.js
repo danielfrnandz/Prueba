@@ -22,6 +22,18 @@ export const getEvaluacionesById = async (id) => {
     }
 }
 
+export const getEvaluacionesByReclutaId = async (id) => {
+    try {
+        const peticion = await fetch(`${url}?_expand=reclute&_expand=module&recluteId=${id}`);
+        const data = await peticion.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
 export const addEvaluacion = async (evaluacion) => {
     try {
         await fetch(url, {
