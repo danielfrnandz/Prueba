@@ -37,26 +37,14 @@
   ],
   "reclutes": [
     {
-      "nameRecluta": "Daniel Fernandez",
-      "edad": "15",
-      "telefono": "3045820919",
-      "correo": "daniel.frnandz@hotmail.com",
-      "direccion": "Bucaramanga",
-      "fechaNac": "1995-12-07",
-      "numeroDI": "1065820742",
-      "fechaIng": "2023-01-11",
-      "teamId": "2",
-      "id": 1
-    },
-    {
       "nameRecluta": "Felipe Rincon",
-      "edad": "20",
+      "edad": "12321",
       "telefono": "3045820919",
       "correo": "daniel.frnandz@asdasd",
-      "direccion": "Floridablanca",
-      "fechaNac": "2023-05-24",
-      "numeroDI": "12312321",
-      "fechaIng": "2023-05-09",
+      "direccion": "asdasdas",
+      "fechaNac": "2023-01-24",
+      "numeroDI": "1065820742",
+      "fechaIng": "2022-03-16",
       "teamId": "4",
       "id": 2
     }
@@ -81,32 +69,19 @@
       "nombre": "Packet Tracer",
       "skillId": "4",
       "id": 4
+    },
+    {
+      "nombre": "Telematica",
+      "skillId": "4",
+      "id": 5
     }
   ],
   "exams": [
     {
       "nota": "5",
-      "recluteId": "1",
-      "moduleId": "2",
-      "id": 1
-    },
-    {
-      "nota": "2",
       "recluteId": "2",
-      "moduleId": "3",
-      "id": 2
-    },
-    {
-      "nota": "5",
-      "recluteId": "1",
       "moduleId": "1",
-      "id": 3
-    },
-    {
-      "nota": "1",
-      "recluteId": "2",
-      "moduleId": "4",
-      "id": 4
+      "id": 1
     }
   ]
 }

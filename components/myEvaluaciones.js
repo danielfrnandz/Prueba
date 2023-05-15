@@ -52,7 +52,7 @@ export default{
         })
     },
 
-    showSelectRecluteUpdate(){
+    showSelectRecluteFilter(){
         const ws = new Worker("config/wsEvaluaciones.js", { type: "module" });
             ws.postMessage({
                 module: "showSelectReclutas",

@@ -10,6 +10,8 @@ myEvaluaciones.updateEvualaciones();
 myEvaluaciones.showSelectRecluteUpdate();
 myEvaluaciones.showSelectSkillUpdate();
 
+myEvaluaciones.showSelectRecluteFilter();
+
 myEvaluaciones.showPerdidos();
 myEvaluaciones.showTodos();
 myEvaluaciones.showReclutaSpecific();

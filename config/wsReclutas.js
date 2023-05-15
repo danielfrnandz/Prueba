@@ -2,7 +2,6 @@ import {  getAllReclutas, getReclutaById, getReclutaByTeamId} from "../API/apiRe
 import { getAllTeams } from "../API/apiTeams.js";
 
 let wsReclutas ={  
-
     async showReclutas(){
         let data = await getAllReclutas();
         let html = ``;    
